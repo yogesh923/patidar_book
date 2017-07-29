@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
 	def index
-		@name = 'yogesh'
+		@name = 'yogesh patidar'
 	end
 end
