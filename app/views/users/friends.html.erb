@@ -1,0 +1,24 @@
+<div class ="container">
+	<div class ="col-md-10">
+  	<% @user.friendships.each do |friendship| %>
+			<div class = "col-md-5 other-user">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6">
+		        	<%= image_tag "#{friendship.friend.id}.jpg", :class => "profile-pic"%>
+						</div>
+						<div class="col-md-6">
+							<label class="user-name"><%= friendship.friend.first_name+" "+friendship.friend.last_name%></label>
+							<%= link_to "remove", friendship, :method => :delete, :class=>'btn btn-danger'%>
+						</div>
+					</div>
+				</div>		
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+
+
+

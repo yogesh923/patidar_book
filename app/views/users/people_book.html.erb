@@ -1,0 +1,33 @@
+<div class ="container">
+	<div class ="col-md-12">
+		<% @other_users.each do |user|%>
+			<div class = "col-md-5 other-user">
+				<div class="col-md-12">
+					<div class="row">
+						<div class="col-md-6">
+		        	<%= image_tag "#{user.id}.jpg", :class => "profile-pic"%>
+						</div>
+						<div class="col-md-6">
+							<%= link_to user_path(user.id), :class =>"user-name" do %>
+								<label class="user-name"><%= user.first_name+' '+user.last_name%></label>
+							<%end%>	
+							<ul class="user-detail">
+								<li>Profession: <%= user.profession%></li>
+								<li>Status: <%= user.status%></li>
+								<li>Date of Birth: <%= user.dob%></li>
+								<li>Gender: <%= user.gender%></li>
+								<li>Mobile: <%= user.phone%></li>
+							</ul>
+							<%= link_to "Add Friend", friendships_path(:friend_id => user.id), :method => :post, :class => "btn btn-primary add-friend-btn" %>
+							<%= link_to "Send Message", friendships_path(:friend_id => user.id), :method => :post, :class => "btn btn-success message-btn" %>
+						</div>
+					</div>
+				</div>		
+			</div>
+		<% end %>
+	</div>
+</div>
+
+
+
+

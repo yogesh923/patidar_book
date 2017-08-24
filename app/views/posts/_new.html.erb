@@ -1,0 +1,19 @@
+<%= form_for :post, :url => posts_path, :html =>{:multipart=>true}, :method =>'post'  do |p|%>
+	<div><h4 class="create-post-head">Create a post</h4></div>
+	<div class="form-group col-md-6 margin-t10">
+		<%= p.text_field :title, :class => 'form-control'%>
+	</div>
+	<div class="clearfix"></div>
+	<div class="form-group col-md-6">	
+		<%= p.text_field :description, :class => 'form-control'%>
+	</div>
+	<div class="form-group col-md-6">	
+		<%= p.file_field :image, :class => 'form-control'%>
+    <%= p.hidden_field :image_cache %>
+	</div>
+
+	<div class="clearfix"></div>
+	<div class="form-group">
+		<%= p.submit 'Create Post', :class => 'btn btn-success create-post-btn'%>
+	</div>
+<% end %>
