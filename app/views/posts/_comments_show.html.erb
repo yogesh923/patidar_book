@@ -1,0 +1,25 @@
+<% unless post.comments.blank? %>
+	<% post.comments.each do |comment|%>
+		<div class = 'row'>
+			<div class="col-md-1">
+				<% if comment.user.attachments.present? %>
+				<%= image_tag comment.user.attachments.first.image_url, :style => 'width:50px;max-height:50px;'%>
+				<% end %>
+			</div>
+			<div class="col-md-5">
+				<label><%= comment.user.first_name+' '+comment.user.last_name%></label></br>
+				<span><%= time_ago_in_words(comment.created_at).gsub('about','') + ' ago' %></span>
+			</div>
+			<div class="col-md-6">
+				<p><%=comment.contain%></p>
+			</div>
+		</div>
+		<div class="row like-comment-share-row">
+			<span>
+				<%=link_to  'javascript:void(0)' do %>
+					<i class="fa fa-thumbs-up" aria-hidden="true">Like</i>
+				<% end %>	
+			</span>
+		</div>
+	<%end%>
+<% end %>

@@ -5,34 +5,7 @@
 			<div class="row post-form">
 				<%= render 'posts/new'%>
 			</div>
-			<% @posts.each do |post|%>
-				<div class="row created-post-display">
-					<div class="post-user-head">
-						<div class="profile-pic">
-							<% post_attachment = post.attachments.first %>
-							<span><%= image_tag post.user.attachments.first.image_url%></span>
-							<label style="text-transform: capitalize;"><%= post.user.first_name+' '+post.user.last_name%></label>				
-							<span><%= time_ago_in_words(post.created_at).gsub('about','') + ' ago' %></span>
-						</div>
-					</div>
-					<div>
-						<p class="padding-10"><%= post.description%></p>
-						<%= image_tag post_attachment.image_url, :style => 'width:100%;heigth: 300px;'%>
-						<hr>
-					</div>
-				</div>
-				<div class="row">
-					<span>
-						<%=link_to  'javascript:void(0)' do %>
-							<i class="fa fa-thumbs-up" aria-hidden="true">Like</i>
-						<%end%>	
-					</span>|
-					<span>
-						<i class="fa fa-comment" aria-hidden="true">Comment</i>
-					</span>|
-					<span><i class="fa fa-share" aria-hidden="true"></i>Share</span>
-				</div>
-			<%end%>
+			<%= render 'posts/index'%>
 		</div>
 		<div class="col-md-3" style='background-color: #fff;'>Right Sidebar</div>	
 	</div>

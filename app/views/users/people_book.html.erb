@@ -5,7 +5,9 @@
 				<div class="col-md-12">
 					<div class="row">
 						<div class="col-md-6">
-		        	<%= image_tag "#{user.id}.jpg", :class => "profile-pic"%>
+		        	<% if user.attachments.present? %>
+			        	<%= image_tag user.attachments.first.image_url, :class => "profile-pic"%>
+			        <% end %>		
 						</div>
 						<div class="col-md-6">
 							<%= link_to user_path(user.id), :class =>"user-name" do %>
@@ -18,8 +20,8 @@
 								<li>Gender: <%= user.gender%></li>
 								<li>Mobile: <%= user.phone%></li>
 							</ul>
-							<%= link_to "Add Friend", friendships_path(:friend_id => user.id), :method => :post, :class => "btn btn-primary add-friend-btn" %>
-							<%= link_to "Send Message", friendships_path(:friend_id => user.id), :method => :post, :class => "btn btn-success message-btn" %>
+							<%= link_to "Add Friend", friendships_path(friend_id: user), method: :post, :class => "btn btn-primary add-friend-btn"%>
+							<%= link_to "Send Message", 'javascript:void(0)', :class => "btn btn-success message-btn" %>
 						</div>
 					</div>
 				</div>		

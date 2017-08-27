@@ -11,7 +11,7 @@ class UsersController < ApplicationController
 
 	def home
 		# @other_users = User.where('id != ?',current_user.id)
-		@posts = Post.all
+		@posts = Post.all.order('id desc')
 	end
 
 	def people_book
