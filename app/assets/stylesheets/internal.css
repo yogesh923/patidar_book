@@ -1,0 +1,173 @@
+body { padding-top: 70px; }
+
+.main-header{
+	background-color: dodgerblue;
+}
+.header-item i{
+	font-size: 25px;
+	color: white
+}
+.header-item .friend-class{
+	font-size: 25px;
+	color: white;
+}
+.header-item i:hover{
+	color: gray;
+}
+.main-brand{
+	color: white;
+	margin-left: -15px;
+  float: left;
+  padding: 15px 15px;
+  font-size: 25px;
+  line-height: 20px;
+  height: 50px;
+}
+/*=====================Sign in Page================= */
+.sign-in-page{
+	background-color: #fff;
+	/*border-bottom: 2px solid darkgray;*/
+	margin-left: 350px;
+	box-shadow: 0px 0px 20px 3px #d3d3d3;
+}
+.new-form{
+	background-color: #fff;
+	border-bottom: 2px solid darkgray;
+	margin-left: 350px;	
+	box-shadow: 0px 0px 20px 3px #d3d3d3;
+}
+.user-profile{
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 3px #d3d3d3;
+}
+.other-user{
+ 	background-color: white;
+  margin: 7px;
+  border: 1px solid lightblue;
+  padding-bottom: 2px;
+}
+
+.other-user .profile-pic{
+	width: 183px;
+	height: 210px;
+	margin-left: -30px;
+}
+
+.other-user	.user-name{
+	margin-top: 10px;
+	margin-left: -24px;
+	font-size: 20px;
+	font-weight: 400;
+	color: dodgerblue;
+	cursor: pointer;
+}
+.user-detail{
+	margin-top: 10px;
+	margin-left: -44px;
+	font-size: 16px;
+	font-weight: 400;
+	color: darkgray;
+}
+.add-friend-btn{
+	/*margin-top: 72px;*/
+	margin-left: -44px;
+}
+.friend-background-image{
+	width: 780px;
+	height: 300px;
+	margin-left: -15px;
+}
+.friend-show{
+	background-color: #fff;
+	box-shadow: 0px 0px 20px 3px #d3d3d3;
+}
+.friend-pro-on-back img{
+  width: 216px;
+  height: 210px;
+  margin-left: 260px;
+  margin-top: -90px;
+  border: 3px solid lightgrey;
+}
+.value li {
+	font-size: 20px;
+	color: #686868;
+	/*margin-left: -31px;*/
+	text-transform:capitalize;
+}
+.key li{
+	font-size: 20px;
+	color: black;
+	margin-left: 140px;
+	text-transform:capitalize;
+}
+.business-tag{
+	width: 340px;
+	height: 327px;
+	margin: 10px;
+	background-color: #f3f3f3;
+	/*border: 2px solid gray;*/
+	box-shadow: 0px 0px 20px 3px #d3d3d3;
+}
+
+.business-tag:hover ~ figcaption{
+	opacity: 0.5; 
+	display: block;
+	font-size: 25px;
+	
+}
+figcaption{
+	display: none;
+}
+
+.post-form{
+	background-color: #fff;
+	/*box-shadow: 0px 0px 20px 3px #d3d3d3;*/
+	border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+.create-post-btn{
+	margin-left: 16px;
+}
+.margin-t10{
+	margin-top: 10px;
+}
+.created-post-display{
+	/*border: 2px solid lightgray;*/
+	background-color: #fff;
+	margin-top: 10px;
+	border: 1px solid;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+}
+.create-post-head{
+	background-color: #f6f7f9;
+  border-bottom: 1px solid #dddfe2;
+  border-radius: 2px 2px 0 0;
+  font-weight: bold;
+  padding: 8px 6px;
+  margin-top: 0px;
+}
+.post-user-head{
+  background-color: #fcfcfc;
+  border-bottom: 1px solid #fcfcfc;
+  border-color: #e5e6e9 #dfe0e4 #d0d1d5;
+  height: 50%;
+}
+.padding-10{
+	padding: 10px 10px 10px 10px;
+}
+
+.profile-pic img{
+	width: 80px;
+  height: 80px;
+  padding: 7px;
+}
+
+.like-comment-share-row{
+  margin-left: 5px;
+  margin-top: -10px;
+  padding-bottom: 10px;
+}
+
+.comment{
+	background-color: #fcfcfc;
+}
