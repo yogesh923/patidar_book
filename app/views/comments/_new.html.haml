@@ -1,0 +1,5 @@
+= form_for :comment, url: comments_path(post_id: post), method: 'post' do |f|
+  .form-group
+    = f.text_area :contain, class: 'form-control'
+  .form-group
+    = f.submit :comment, class: 'btn'

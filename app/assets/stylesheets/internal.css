@@ -171,3 +171,9 @@ figcaption{
 .comment{
 	background-color: #fcfcfc;
 }
+
+footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+}

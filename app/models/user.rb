@@ -4,9 +4,10 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
 
+	# Associations
 	has_many :posts, dependent: :destroy
 	has_many :attachments, as: :attached_item, dependent: :destroy
-	has_many :comments 
+	has_many :comments, dependent: :destroy
   has_many :friendships
   has_many :received_friendships, class_name: "Friendship", foreign_key: "friend_id"
 

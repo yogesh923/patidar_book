@@ -19,17 +19,12 @@ Rails.application.routes.draw do
 		end
 	end
 
-	resources :business_logs do
-	end
+	resources :business_logs
 
-	resources :posts do
-	end
+	resources :posts
 
-	resources :comments, only: [:create, :update, :destroy]
 	resources :friendships, only: [:create, :update, :destroy]
 
-	resources :posts do 
-		resources :comments, only: [:create, :update, :destroy]
-	end 
+	resources :comments, only: [:create]
 
 end
