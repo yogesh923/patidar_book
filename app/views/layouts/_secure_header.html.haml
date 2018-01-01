@@ -1,0 +1,63 @@
+%nav.navbar.navbar-findcond.navbar-fixed-top
+  .container
+    .navbar-header
+      %button.navbar-toggle.collapsed{"data-target" => "#navbar", "data-toggle" => "collapse", :type => "button"}
+        %span.sr-only Toggle navigation
+        %span.icon-bar
+        %span.icon-bar
+        %span.icon-bar
+      %a.navbar-brand{:href => "#"} PatidarBook
+    #navbar.collapse.navbar-collapse
+      %ul.nav.navbar-nav.navbar-right
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            %i.fa.fa-fw.fa-bell-o
+            Notification
+            %span.badge 0
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-fw.fa-tag
+                %span.badge Music
+                sayfası
+                %span.badge Video
+                sayfasında etiketlendi
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-fw.fa-thumbs-o-up
+                %span.badge Music
+                sayfasında iletiniz beğenildi
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-fw.fa-thumbs-o-up
+                %span.badge Video
+                sayfasında iletiniz beğenildi
+            %li
+              %a{:href => "#"}
+                %i.fa.fa-fw.fa-thumbs-o-up
+                %span.badge Game
+                sayfasında iletiniz beğenildi
+        = active_link_to 'Friends', friends_path, active: :exclusive, wrap_tag: :li
+        %li
+          %a{:href => "#"}
+            Business
+            %span.sr-only (current)
+        %li
+          %a{:href => "#"}
+            Messages
+            %span.sr-only (current)    
+        %li.dropdown
+          %a.dropdown-toggle{"aria-expanded" => "false", "data-toggle" => "dropdown", :href => "#", :role => "button"}
+            = current_user.first_name
+            %span.caret
+          %ul.dropdown-menu{:role => "menu"}
+            %li
+              %a{:href => "#"} Geri bildirim
+            %li
+              %a{:href => "#"} Yardım
+            %li.divider
+            %li
+              %a{:href => "#"} Ayarlar
+            = active_link_to 'logout', destroy_user_session_path, method: 'delete', active: :exclusive, wrap_tag: :li
+      %form.navbar-form.navbar-right.search-form{:role => "search"}
+        %input.form-control{:placeholder => "Search", :type => "text"}/

@@ -24,6 +24,9 @@ GEM
       erubis (~> 2.7.0)
       rails-dom-testing (~> 2.0)
       rails-html-sanitizer (~> 1.0, >= 1.0.3)
+    active_link_to (1.0.5)
+      actionpack
+      addressable
     activejob (5.0.6)
       activesupport (= 5.0.6)
       globalid (>= 0.3.6)
@@ -38,6 +41,8 @@ GEM
       i18n (~> 0.7)
       minitest (~> 5.1)
       tzinfo (~> 1.1)
+    addressable (2.5.2)
+      public_suffix (>= 2.0.2, < 4.0)
     arel (7.1.4)
     bcrypt (3.1.11)
     bindex (0.5.0)
@@ -126,9 +131,11 @@ GEM
       kaminari (>= 0.15)
       rails (>= 4.2.0)
     orm_adapter (0.5.0)
+    pg (0.21.0)
     pry (0.11.3)
       coderay (~> 1.1.0)
       method_source (~> 0.9.0)
+    public_suffix (3.0.1)
     puma (3.11.0)
     rack (2.0.3)
     rack-test (0.6.3)
@@ -223,6 +230,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  active_link_to
   byebug
   carrierwave (~> 1.0)
   coffee-rails (~> 4.2)
@@ -233,6 +241,7 @@ DEPENDENCIES
   jquery-rails
   listen (~> 3.0.5)
   notifications
+  pg (~> 0.18)
   pry
   puma (~> 3.0)
   rails (~> 5.0.2)

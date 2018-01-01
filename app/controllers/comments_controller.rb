@@ -11,11 +11,10 @@ class CommentsController < ApplicationController
 		@comment.user_id = current_user.id
 		if @comment.save
 			flash[:success] = 'commented'
-			redirect_to root_url
 		else
 			flash[:success] = 'not commented'
-			redirect_to root_url
 		end
+		redirect_to root_url
 	end
 
 	private

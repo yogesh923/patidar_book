@@ -27,4 +27,12 @@ Rails.application.routes.draw do
 
 	resources :comments, only: [:create]
 
+	resources :friends, only: [:index] do
+		get :connected, on: :collection
+		get :active, on: :collection
+		get :received, on: :collection
+		get :close, on: :collection
+		get :requested, on: :collection
+	end
+
 end

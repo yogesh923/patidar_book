@@ -65,3 +65,7 @@ gem 'carrierwave', '~> 1.0'
 gem "rmagick", "~>2.13.2", :require => 'RMagick'
 # To make lighweight view
 gem 'haml'
+# To show Current active tab
+gem 'active_link_to'
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 0.18'

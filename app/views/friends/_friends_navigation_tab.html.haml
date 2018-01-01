@@ -1,0 +1,7 @@
+.container
+  %ul.nav.nav-tabs
+    = active_link_to 'Connected', connected_friends_path, active: :exclusive, wrap_tag: :li, class: 'nav-item'
+    = active_link_to 'Close Friend', close_friends_path, active: :exclusive, wrap_tag: :li, class: 'nav-item'
+    = active_link_to 'Requested', requested_friends_path, active: :exclusive, wrap_tag: :li, class: 'nav-item'
+    = active_link_to 'Received', received_friends_path, active: :exclusive, wrap_tag: :li, class: 'nav-item'
+    = active_link_to 'Active', active_friends_path, active: :exclusive, wrap_tag: :li, class: 'nav-item'
