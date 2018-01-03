@@ -14,9 +14,8 @@ class FriendshipsController < ApplicationController
   end
 
   def update
-  @friendship = Friendship.find_by(id: params[:id])
-  @friendship.update(status: "accepted")
-    if @friendship.save
+    @friendship = Friendship.where(user_id: params[:id], friend_id: current_user).uniq.last
+    if @friendship.accepted!
       redirect_to root_url, notice: "Successfully confirmed friend!"
     else
       redirect_to root_url, notice: "Sorry! Could not confirm friend!"

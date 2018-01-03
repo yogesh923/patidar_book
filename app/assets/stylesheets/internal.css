@@ -173,7 +173,17 @@ figcaption{
 }
 
 footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+.margin-b20{
+	margin-bottom: 20px;
+}
+.margin-t20{
+	margin-top: 20px;
+}
+.send-btn{
+	padding: 10px;
+	margin: 10px 0;
 }

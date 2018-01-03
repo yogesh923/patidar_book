@@ -36,12 +36,9 @@
               %a{:href => "#"}
                 %i.fa.fa-fw.fa-thumbs-o-up
                 %span.badge Game
-                sayfasında iletiniz beğenildi
+                sayfasında iletiniz beğenildi 
         = active_link_to 'Friends', friends_path, active: :exclusive, wrap_tag: :li
-        %li
-          %a{:href => "#"}
-            Business
-            %span.sr-only (current)
+        = active_link_to 'Business', business_index_path, active: :exclusive, wrap_tag: :li
         %li
           %a{:href => "#"}
             Messages

@@ -1,1 +1,26 @@
 = render 'friends/friends_navigation_tab'
+.container
+  .col-md-8
+    - @users.each do |user|
+      .card.b-1.hover-shadow.mb-20
+        .media.card-body
+          .media-left.pr-12
+            %img.avatar.avatar-xl.no-radius{:alt => "...", :src => "http://bootdey.com/img/Content/avatar/avatar1.png"}/
+          .media-body
+            .mb-2
+              %span.fs-20.pr-16.text-capitalize= "#{user.full_name}"
+            %small.fs-16.fw-300.ls-1.text-capitalize= "#{user.profession}"
+          .media-right.text-right.d-none.d-md-block
+            %p.fs-14.text-fade.mb-12
+              %i.fa.fa-map-marker.pr-1
+              = user.address
+            %span.text-fade
+              %i.fa.fa-money.pr-1
+              $60 per hour
+        %footer.card-footer.flexbox.align-items-center
+          %div
+            %strong Applied on:
+            %span 21 Jan, 2017
+          .card-hover-show
+            %a.btn.btn-bold.btn-info{:href => "#"} Cancel
+            %a.btn.btn-bold.btn-warning{:href => "#"} Block

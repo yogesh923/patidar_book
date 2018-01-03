@@ -3,6 +3,7 @@ class FriendsController < ApplicationController
   before_action :authenticate_user!
 
   def index
+    @users = User.arround_people_group(current_user.id)
   end
 
   def new
@@ -18,6 +19,7 @@ class FriendsController < ApplicationController
   end
 
   def connected
+    @users = current_user.friends
   end
 
   def active
@@ -27,9 +29,11 @@ class FriendsController < ApplicationController
   end
 
   def requested
+    @users = current_user.pending_friends
   end
 
   def received
+    @users = current_user.requested_friendships
   end
 
 end

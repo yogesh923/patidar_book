@@ -16,6 +16,9 @@ class User < ApplicationRecord
   has_many :pending_friends, -> { where(friendships: { accepted: false}) }, through: :friendships, source: :friend
   has_many :requested_friendships, -> { where(friendships: { accepted: false}) }, through: :received_friendships, source: :user
 
+	# Scopes
+	scope :arround_people_group,-> (id){ where.not(id: id) }
+
 	# to call all your friends
 
 	def friends
@@ -30,6 +33,10 @@ class User < ApplicationRecord
 
 	def follow(user)
     Notification.create(notify_type: 'follow', actor: self, user: user)
+  end
+
+  def full_name
+  	"#{self.first_name + ' ' + self.last_name}"
   end
 
 end

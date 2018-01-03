@@ -1,1 +1,20 @@
 = render 'friends/friends_navigation_tab'
+.container
+  .row
+  -	@users.each do |user|
+    .col-sm-6.col-md-4.col-lg-3.mt-4.margin-t20
+      .card
+        %img.card-img-top{:src => "http://success-at-work.com/wp-content/uploads/2015/04/free-stock-photos.gif"}/
+        .card-block
+          %h4.card-title.text-capitalize= "#{user.full_name}"
+          .meta
+            %a{:href => "#"} Friends
+          .card-text
+            Tawshif is a web designer living in Bangladesh.
+          .form-group
+            = link_to 'Send Request', friendships_path(friend_id: user.id), method: :post, class: 'btn btn-success btn-block send-btn'  
+        .card-footer
+          %span.float-right Joined in 2013
+          %span
+            %i>
+            75 Friends

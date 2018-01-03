@@ -19,8 +19,6 @@ Rails.application.routes.draw do
 		end
 	end
 
-	resources :business_logs
-
 	resources :posts
 
 	resources :friendships, only: [:create, :update, :destroy]
@@ -34,5 +32,7 @@ Rails.application.routes.draw do
 		get :close, on: :collection
 		get :requested, on: :collection
 	end
+
+	resources :business, only:  :index
 
 end
